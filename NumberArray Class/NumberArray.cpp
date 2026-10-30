@@ -24,7 +24,14 @@ NumberArray::~NumberArray()
 
 void NumberArray::setNumber(int index, double value)
 {
-
+	if (index >= 0 && index < size)
+	{
+		data[index] = value;
+	}
+	else
+	{
+		cout << "Invalid Input\n";
+	}
 }
 
 /*double NumberArray::getNumber(int index) const
